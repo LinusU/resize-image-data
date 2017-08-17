@@ -2,5 +2,13 @@
   "name": "resize-image-data",
   "version": "0.0.0",
   "license": "MIT",
-  "repository": "LinusU/resize-image-data"
+  "repository": "LinusU/resize-image-data",
+  "scripts": {
+    "test": "standard && mocha"
+  },
+  "devDependencies": {
+    "lodepng": "^1.0.0",
+    "mocha": "^3.5.0",
+    "standard": "^10.0.3"
+  }
 }
