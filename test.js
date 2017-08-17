@@ -47,6 +47,7 @@ describe('Resize Image Data', () => {
   addTestCase('sample2', 172, 129, 'biliniear-interpolation')
   addTestCase('sample2', 172, 129, 'nearest-neighbor')
   addTestCase('sample2', 172, 149, 'biliniear-interpolation')
+  addTestCase('sample2', 172, 149, 'nearest-neighbor')
   addTestCase('sample2', 88, 66, 'biliniear-interpolation')
   addTestCase('sample2', 88, 66, 'nearest-neighbor')
 })
