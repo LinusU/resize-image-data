@@ -5,8 +5,8 @@ function nearestNeighbor (src, dst) {
 
   for (let y = 0; y < dst.height; y++) {
     for (let x = 0; x < dst.width; x++) {
-      const srcX = Math.round(x * src.width / dst.width)
-      const srcY = Math.round(y * src.height / dst.height)
+      const srcX = Math.floor(x * src.width / dst.width)
+      const srcY = Math.floor(y * src.height / dst.height)
 
       let srcPos = ((srcY * src.width) + srcX) * 4
 
