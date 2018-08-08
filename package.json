@@ -3,6 +3,10 @@
   "version": "0.1.2",
   "license": "MIT",
   "repository": "LinusU/resize-image-data",
+  "files": [
+    "index.js",
+    "index.d.ts"
+  ],
   "scripts": {
     "test": "standard && mocha"
   },
