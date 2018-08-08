@@ -1,7 +1,7 @@
 interface ImageLike {
   width: number
   height: number
-  data: Uint8Array | number[]
+  data: Uint8Array | Uint8ClampedArray | number[]
 }
 
 interface Image {
