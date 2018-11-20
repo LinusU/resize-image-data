@@ -7,6 +7,7 @@ const path = require('path')
 const assert = require('assert')
 
 const lodepng = require('lodepng')
+const ImageData = require('@canvas/image-data')
 
 const resizeImageData = require('./')
 
@@ -28,11 +29,15 @@ function addTestCase (name, width, height, algorithm) {
     ]).then((images) => {
       const actual = resizeImageData(images[0], width, height, algorithm)
 
+      assert.ok(actual instanceof ImageData)
+
       assert.strictEqual(actual.width, images[1].width)
       assert.strictEqual(actual.height, images[1].height)
 
       assert.strictEqual(actual.data.length, images[1].data.length, 'The resized data should match the target data (length)')
-      assert.ok(Buffer.compare(actual.data, images[1].data) === 0, 'The resized data should match the target data (bytes)')
+
+      const actualData = new Uint8Array(actual.data.buffer, actual.data.byteOffset, actual.data.length)
+      assert.ok(Buffer.compare(actualData, images[1].data) === 0, 'The resized data should match the target data (bytes)')
     })
   })
 }

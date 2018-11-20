@@ -10,9 +10,12 @@
   "scripts": {
     "test": "standard && mocha"
   },
+  "dependencies": {
+    "@canvas/image-data": "^1.0.0"
+  },
   "devDependencies": {
     "@types/node": "^10.5.7",
-    "lodepng": "^1.0.0",
+    "lodepng": "^1.2.0",
     "mocha": "^5.2.0",
     "standard": "^11.0.1"
   }

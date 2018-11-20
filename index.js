@@ -1,5 +1,7 @@
 'use strict'
 
+const ImageData = require('@canvas/image-data')
+
 function nearestNeighbor (src, dst) {
   let pos = 0
 
@@ -70,8 +72,7 @@ module.exports = function resizeImageData (image, width, height, algorithm) {
     default: throw new Error(`Unknown algorithm: ${algorithm}`)
   }
 
-  const data = Buffer.allocUnsafe(width * height * 4)
-  const result = { width, height, data }
+  const result = new ImageData(width, height)
 
   resize(image, result)
 

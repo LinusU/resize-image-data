@@ -22,7 +22,7 @@ console.log(result.height)
 //=> 128
 
 console.log(result.data)
-//=> Buffer(...)
+//=> Uint8ClampedArray [ ... ]
 ```
 
 ## API
@@ -44,4 +44,4 @@ The following algorithms is currently supported:
 
 If no algorithm is provided, it will currently default to `biliniear-interpolation`. This may however change in any subsequent release, so don't count on it being stable between even minor and patch releases. The goal is to provide the "best" experience when not supplying an algorithm, which could mean different default algorithms depending wether we are scaling up or down.
 
-Returns a object with `width`, `height` and `data`, where `data` is a `Buffer`.
+Returns an `ImageData` instance.
