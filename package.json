@@ -14,8 +14,11 @@
     "@canvas/image-data": "^1.0.0"
   },
   "devDependencies": {
-    "lodepng": "^1.2.0",
-    "mocha": "^5.2.0",
-    "standard": "^11.0.1"
+    "lodepng": "^2.0.0",
+    "mocha": "^6.2.2",
+    "standard": "^14.3.1"
+  },
+  "engines": {
+    "node": ">=8.6.0"
   }
 }

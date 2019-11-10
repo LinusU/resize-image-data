@@ -35,9 +35,7 @@ function addTestCase (name, width, height, algorithm) {
       assert.strictEqual(actual.height, images[1].height)
 
       assert.strictEqual(actual.data.length, images[1].data.length, 'The resized data should match the target data (length)')
-
-      const actualData = new Uint8Array(actual.data.buffer, actual.data.byteOffset, actual.data.length)
-      assert.ok(Buffer.compare(actualData, images[1].data) === 0, 'The resized data should match the target data (bytes)')
+      assert.deepStrictEqual(actual.data, images[1].data, 'The resized data should match the target data (bytes)')
     })
   })
 }
