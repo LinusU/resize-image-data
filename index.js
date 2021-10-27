@@ -63,11 +63,13 @@ function bilinearInterpolation (src, dst) {
 }
 
 module.exports = function resizeImageData (image, width, height, algorithm) {
-  algorithm = algorithm || 'biliniear-interpolation'
+  algorithm = algorithm || 'bilinear-interpolation'
 
   let resize
   switch (algorithm) {
     case 'nearest-neighbor': resize = nearestNeighbor; break
+    case 'bilinear-interpolation': resize = bilinearInterpolation; break
+    // FIXME: Only for backwards compatibility, remove in next major version
     case 'biliniear-interpolation': resize = bilinearInterpolation; break
     default: throw new Error(`Unknown algorithm: ${algorithm}`)
   }

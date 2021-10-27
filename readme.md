@@ -13,7 +13,7 @@ npm install --save resize-image-data
 ```js
 const resizeImageData = require('resize-image-data')
 
-const result = resizeImageData(image, 128, 128, 'biliniear-interpolation')
+const result = resizeImageData(image, 128, 128, 'bilinear-interpolation')
 
 console.log(result.width)
 //=> 128
@@ -40,8 +40,8 @@ The `image` argument should be a `ImageData` instance, or any object with the fo
 The following algorithms is currently supported:
 
 - `nearest-neighbor`
-- `biliniear-interpolation`
+- `bilinear-interpolation`
 
-If no algorithm is provided, it will currently default to `biliniear-interpolation`. This may however change in any subsequent release, so don't count on it being stable between even minor and patch releases. The goal is to provide the "best" experience when not supplying an algorithm, which could mean different default algorithms depending wether we are scaling up or down.
+If no algorithm is provided, it will currently default to `bilinear-interpolation`. This may however change in any subsequent release, so don't count on it being stable between even minor and patch releases. The goal is to provide the "best" experience when not supplying an algorithm, which could mean different default algorithms depending wether we are scaling up or down.
 
 Returns an `ImageData` instance.

@@ -6,7 +6,8 @@ interface ImageLike {
   data: Uint8Array | Uint8ClampedArray | number[]
 }
 
-type Algorithm = 'nearest-neighbor' | 'biliniear-interpolation'
+// FIXME: "biliniear" only for backwards compatibility, remove in next major version
+type Algorithm = 'nearest-neighbor' | 'bilinear-interpolation' | 'biliniear-interpolation'
 
 declare function resizeImageData(image: ImageLike, width: number, height: number, algorithm?: Algorithm): ImageData
 

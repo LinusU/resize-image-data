@@ -41,16 +41,16 @@ function addTestCase (name, width, height, algorithm) {
 }
 
 describe('Resize Image Data', () => {
-  addTestCase('sample1', 180, 135, 'biliniear-interpolation')
+  addTestCase('sample1', 180, 135, 'bilinear-interpolation')
   addTestCase('sample1', 180, 135, 'nearest-neighbor')
-  addTestCase('sample1', 220, 165, 'biliniear-interpolation')
+  addTestCase('sample1', 220, 165, 'bilinear-interpolation')
   addTestCase('sample1', 220, 165, 'nearest-neighbor')
-  addTestCase('sample2', 23, 97, 'biliniear-interpolation')
+  addTestCase('sample2', 23, 97, 'bilinear-interpolation')
   addTestCase('sample2', 23, 97, 'nearest-neighbor')
-  addTestCase('sample2', 172, 129, 'biliniear-interpolation')
+  addTestCase('sample2', 172, 129, 'bilinear-interpolation')
   addTestCase('sample2', 172, 129, 'nearest-neighbor')
-  addTestCase('sample2', 172, 149, 'biliniear-interpolation')
+  addTestCase('sample2', 172, 149, 'bilinear-interpolation')
   addTestCase('sample2', 172, 149, 'nearest-neighbor')
-  addTestCase('sample2', 88, 66, 'biliniear-interpolation')
+  addTestCase('sample2', 88, 66, 'bilinear-interpolation')
   addTestCase('sample2', 88, 66, 'nearest-neighbor')
 })
