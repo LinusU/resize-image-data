@@ -45,3 +45,7 @@ The following algorithms is currently supported:
 If no algorithm is provided, it will currently default to `bilinear-interpolation`. This may however change in any subsequent release, so don't count on it being stable between even minor and patch releases. The goal is to provide the "best" experience when not supplying an algorithm, which could mean different default algorithms depending wether we are scaling up or down.
 
 Returns an `ImageData` instance.
+
+## Related
+
+- [`rotate-image-data`](https://github.com/LinusU/rotate-image-data) - Rotate a decoded raw image
